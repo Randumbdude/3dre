@@ -6,3 +6,6 @@
 3607	4290	8146577213313653	3dre/3dre.exe	fa9928d6b3dbc9e6
 29	2658	8146577177502498	3dre/CMakeFiles/3dre.dir/input/input.cpp.obj	82f7684cfe077aac
 36	3607	8146577177614171	3dre/CMakeFiles/3dre.dir/processor/scheduler.cpp.obj	33365de5a8af80ea
+20	1812	8146579508939329	3dre/CMakeFiles/3dre.dir/main.cpp.obj	e70046431a815da4
+28	1881	8146579508993033	3dre/CMakeFiles/3dre.dir/graphics/renderer.cpp.obj	2e6c74c7d2ebe03c
+1881	2179	8146579527553682	3dre/3dre.exe	5b2291341007b154
