@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake",
+		"C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
