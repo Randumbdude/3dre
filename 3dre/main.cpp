@@ -5,7 +5,8 @@
 #include <dxgi.h>
 #include <wrl/client.h>
 
-#include "input/input.h"
+#include "3dre.h"
+#include "input.h"
 
 using Microsoft::WRL::ComPtr;
 
@@ -50,10 +51,13 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 	case WM_KEYDOWN:
 		if (wParam == VK_ESCAPE)
 			g_running = false;
-		input::handle_key_down(wParam);
+		input::handle_key_down(wParam); // send to keydown handler
 		return 0;
 	case WM_KEYUP:
-		input::handle_key_up(wParam);
+		input::handle_key_up(wParam); // send to keyup handler
+		return 0;
+	case WM_KILLFOCUS:
+		input::reset_keys(); // avoid keys staying held if focus is lost
 		return 0;
 	case WM_DESTROY:
 		g_running = false;
@@ -147,6 +151,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		g_context->ClearRenderTargetView(g_rtv.Get(), black);
 
 		// TODO: your engine's drawing goes here
+
+		if(KEY_A_PRESSED) std::cout << "'A' was pressed." << std::endl;
 
 		g_swapChain->Present(1, 0); // 1 = vsync
 	}
