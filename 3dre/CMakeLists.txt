@@ -4,13 +4,19 @@
 
 # Add source to this project's executable.
 add_executable (3dre WIN32 "main.cpp"
+  "3dre.h"
+  flags.h
   input/input.cpp
   input/input.h
   input/keys.h
-  3dre.h)
+  processor/scheduler.h
+  processor/scheduler.cpp
+  graphics/renderer.cpp
+  graphics/renderer.h
+  )
 
 set_target_properties(3dre PROPERTIES
-  CXX_STANDARD 17
+  CXX_STANDARD 20
   CXX_STANDARD_REQUIRED ON
 )
 
@@ -26,6 +32,8 @@ target_link_libraries(3dre PRIVATE
 target_include_directories(3dre PRIVATE 
 ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/input
+${CMAKE_CURRENT_SOURCE_DIR}/graphics
+${CMAKE_CURRENT_SOURCE_DIR}/processor
 )
 
 

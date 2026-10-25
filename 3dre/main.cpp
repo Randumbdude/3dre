@@ -7,6 +7,7 @@
 
 #include "3dre.h"
 #include "input.h"
+#include "flags.h"
 
 using Microsoft::WRL::ComPtr;
 
@@ -15,7 +16,6 @@ static ComPtr<ID3D11Device> g_device;
 static ComPtr<ID3D11DeviceContext> g_context;
 static ComPtr<IDXGISwapChain> g_swapChain;
 static ComPtr<ID3D11RenderTargetView> g_rtv;
-static bool g_running = true;
 
 static void CreateRenderTarget()
 {
@@ -50,7 +50,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 		return 0;
 	case WM_KEYDOWN:
 		if (wParam == VK_ESCAPE)
-			g_running = false;
+			flags::g_running = false;
 		input::handle_key_down(wParam); // send to keydown handler
 		return 0;
 	case WM_KEYUP:
@@ -60,7 +60,7 @@ static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPara
 		input::reset_keys(); // avoid keys staying held if focus is lost
 		return 0;
 	case WM_DESTROY:
-		g_running = false;
+		flags::g_running = false;
 		PostQuitMessage(0);
 		return 0;
 	}
@@ -135,12 +135,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 
 	// ---- Main loop ----
 	MSG msg = {};
-	while (g_running)
+	while (flags::g_running)
 	{
 		while (PeekMessageA(&msg, nullptr, 0, 0, PM_REMOVE))
 		{
 			if (msg.message == WM_QUIT)
-				g_running = false;
+				flags::g_running = false;
 			TranslateMessage(&msg);
 			DispatchMessageA(&msg);
 		}
@@ -150,11 +150,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		g_context->OMSetRenderTargets(1, g_rtv.GetAddressOf(), nullptr);
 		g_context->ClearRenderTargetView(g_rtv.Get(), black);
 
-		// TODO: your engine's drawing goes here
 
-		if(KEY_A_PRESSED) std::cout << "'A' was pressed." << std::endl;
 
-		g_swapChain->Present(1, 0); // 1 = vsync
+		g_swapChain->Present(1, flags::VSYNC); // 1 = vsync
 	}
 
 	return 0;
