@@ -1,12 +1,6 @@
 # ninja log v7
-15	237	8146048711840711	build.ninja	9e191b4cc38c3688
-15	237	8146048711738644	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
-15	237	8146048711763680	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
-23	921	8146046731526539	3dre/CMakeFiles/3dre.dir/main.cpp.obj	2d501cd54d748e8d
-1351	1661	8146038194259969	3dre/3dre.exe	32022fc58a4f3e84
-5	219	8146048711840711	build.ninja	9e191b4cc38c3688
-5	219	8146048711840711	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
-5	219	8146048711840711	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
-22	263	8146048712894337	3dre/3dre.exe	b75c57981980be69
-15	622	8146052417510935	3dre/CMakeFiles/3dre.dir/main.cpp.obj	2d501cd54d748e8d
-623	834	8146052423455613	3dre/3dre.exe	b75c57981980be69
+5	219	8146096515501458	build.ninja	9e191b4cc38c3688
+5	219	8146096515403405	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
+5	219	8146096515453662	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
+22	1978	8146094324993600	3dre/CMakeFiles/3dre.dir/main.cpp.obj	2d501cd54d748e8d
+1979	2250	8146094344487700	3dre/3dre.exe	b75c57981980be69
