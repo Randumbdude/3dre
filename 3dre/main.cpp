@@ -1,21 +1,9 @@
-﻿#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
-#include <windows.h>
-#include <d3d11.h>
-#include <dxgi.h>
-#include <wrl/client.h>
-
-#include "3dre.h"
+﻿#include "3dre.h"
 #include "input.h"
 #include "flags.h"
+#include "renderer.h"
 
-using Microsoft::WRL::ComPtr;
-
-// ---- Globals (move into an Engine/Renderer class once this grows) ----
-static ComPtr<ID3D11Device> g_device;
-static ComPtr<ID3D11DeviceContext> g_context;
-static ComPtr<IDXGISwapChain> g_swapChain;
-static ComPtr<ID3D11RenderTargetView> g_rtv;
+using namespace renderer;
 
 static void CreateRenderTarget()
 {
