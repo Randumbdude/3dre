@@ -13,4 +13,12 @@ using Microsoft::WRL::ComPtr;
 namespace _3dre
 {
     inline std::string VERSION = "0.0.0.0";
+    inline std::string window_title = "3dre";
+};
+
+namespace flags
+{
+    inline bool VSYNC = false;
+    inline bool g_running = true;
+    inline bool title_fps = true;
 };

@@ -1,25 +1,26 @@
 ﻿#include "3dre.h"
 #include "input.h"
-#include "flags.h"
 #include "renderer.h"
+
+#include <chrono>
 
 using namespace renderer;
 
 static void CreateRenderTarget()
 {
 	ComPtr<ID3D11Texture2D> backBuffer;
-	g_swapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
-	g_device->CreateRenderTargetView(backBuffer.Get(), nullptr, &g_rtv);
+	g_swap_chain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
+	g_device->CreateRenderTargetView(backBuffer.Get(), nullptr, &g_render_target);
 }
 
 static void OnResize(UINT width, UINT height)
 {
-	if (!g_swapChain || width == 0 || height == 0)
+	if (!g_swap_chain || width == 0 || height == 0)
 		return;
 
 	g_context->OMSetRenderTargets(0, nullptr, nullptr);
-	g_rtv.Reset(); // must release before resizing
-	g_swapChain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
+	g_render_target.Reset(); // must release before resizing
+	g_swap_chain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
 	CreateRenderTarget();
 
 	D3D11_VIEWPORT vp = {};
@@ -77,7 +78,7 @@ static bool InitD3D(HWND hwnd, UINT width, UINT height)
 	HRESULT hr = D3D11CreateDeviceAndSwapChain(
 		nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, flags,
 		&requested, 1, D3D11_SDK_VERSION,
-		&scd, &g_swapChain, &g_device, nullptr, &g_context);
+		&scd, &g_swap_chain, &g_device, nullptr, &g_context);
 
 	if (FAILED(hr))
 		return false;
@@ -105,7 +106,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 	AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
 
 	HWND hwnd = CreateWindowExA(
-		0, className, "3dre", WS_OVERLAPPEDWINDOW,
+		0, className, _3dre::window_title.c_str(), WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		rect.right - rect.left, rect.bottom - rect.top,
 		nullptr, nullptr, hInstance, nullptr);
@@ -119,7 +120,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		return 1;
 	}
 
+	flags::g_running = true;
 	ShowWindow(hwnd, nCmdShow);
+
+	// TODO: Start the tps methods using the scheduler.
+
+	// fps vars
+	auto fps_timer = std::chrono::steady_clock::now();
+	int fps_frames = 0;
+	int fps = 0;
 
 	// ---- Main loop ----
 	MSG msg = {};
@@ -133,14 +142,26 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 			DispatchMessageA(&msg);
 		}
 
+		// fps
+		fps_frames++;
+		auto now = std::chrono::steady_clock::now();
+		if (now - fps_timer >= std::chrono::seconds(1))
+		{
+			fps = fps_frames;
+			fps_frames = 0;
+			fps_timer = now;
+			if (flags::title_fps)
+				SetWindowTextA(hwnd, ("fps: " + std::to_string(fps)).c_str());
+		}
+
 		// ---- Render ----
 		const float black[4] = {0, 0, 0, 1}; // black
-		g_context->OMSetRenderTargets(1, g_rtv.GetAddressOf(), nullptr);
-		g_context->ClearRenderTargetView(g_rtv.Get(), black);
+		g_context->OMSetRenderTargets(1, g_render_target.GetAddressOf(), nullptr);
+		g_context->ClearRenderTargetView(g_render_target.Get(), black);
 
+		render_main(); // call render main
 
-
-		g_swapChain->Present(1, flags::VSYNC); // 1 = vsync
+		g_swap_chain->Present(1, flags::VSYNC); // 1 = vsync
 	}
 
 	return 0;
