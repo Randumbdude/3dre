@@ -58,5 +58,11 @@
   "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -IC:\\Users\\myser\\source\\repos\\3dre\\3dre -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\input -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\graphics -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\processor -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math\\vector -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math\\matrix /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI /Fo3dre\\CMakeFiles\\3dre.dir\\graphics\\triangle.cpp.obj /Fd3dre\\CMakeFiles\\3dre.dir\\ /FS -c C:\\Users\\myser\\source\\repos\\3dre\\3dre\\graphics\\triangle.cpp",
   "file": "C:/Users/myser/source/repos/3dre/3dre/graphics/triangle.cpp",
   "output": "C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/CMakeFiles/3dre.dir/graphics/triangle.cpp.obj"
+},
+{
+  "directory": "C:/Users/myser/source/repos/3dre/out/build/x64-debug",
+  "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -IC:\\Users\\myser\\source\\repos\\3dre\\3dre -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\input -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\graphics -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\processor -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math\\vector -IC:\\Users\\myser\\source\\repos\\3dre\\3dre\\math\\matrix /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI /Fo3dre\\CMakeFiles\\3dre.dir\\graphics\\mesh.cpp.obj /Fd3dre\\CMakeFiles\\3dre.dir\\ /FS -c C:\\Users\\myser\\source\\repos\\3dre\\3dre\\graphics\\mesh.cpp",
+  "file": "C:/Users/myser/source/repos/3dre/3dre/graphics/mesh.cpp",
+  "output": "C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/CMakeFiles/3dre.dir/graphics/mesh.cpp.obj"
 }
 ]

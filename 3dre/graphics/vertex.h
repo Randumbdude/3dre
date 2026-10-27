@@ -6,13 +6,13 @@ class vertex
 {
 public:
     /// Position in object space.
-    vector3 v;
+    vector3 pos;
 
     /// Surface normal in object space (defaults to up).
-    vector3 nv;
+    vector3 norm_pos;
 
     /// Texture coordinates (UV).
-    vector2 uv;
+    vector2 tex_cords;
 
     /// Creates a vertex at the origin with an up-facing normal and zero UVs.
     vertex();

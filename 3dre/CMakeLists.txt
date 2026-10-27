@@ -24,6 +24,8 @@ add_executable (3dre WIN32 "main.cpp"
   graphics/vertex.h
   graphics/triangle.cpp
   graphics/triangle.h
+  graphics/mesh.cpp
+  graphics/mesh.h
   )
 
 set_target_properties(3dre PROPERTIES
