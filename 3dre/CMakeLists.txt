@@ -20,6 +20,8 @@ add_executable (3dre WIN32 "main.cpp"
   math/vector/vector4.h
   math/matrix/matrix4x4.cpp
   math/matrix/matrix4x4.h
+  graphics/vertex.cpp
+  graphics/vertex.h
   )
 
 set_target_properties(3dre PROPERTIES
