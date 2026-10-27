@@ -1,7 +1,7 @@
 # ninja log v7
-16	252	8147479983860559	build.ninja	9e191b4cc38c3688
-16	252	8147479983565051	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
-16	252	8147479983701572	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
+16	252	8147809027872586	build.ninja	9e191b4cc38c3688
+16	252	8147809027754761	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
+16	252	8147809027872586	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
 27	3873	8146937342385879	3dre/CMakeFiles/3dre.dir/main.cpp.obj	59cb3ca595a4eb3a
 779	1068	8146949646493238	3dre/3dre.exe	3479db86a4a11ae7
 33	2865	8146937342502405	3dre/CMakeFiles/3dre.dir/input/input.cpp.obj	14ed9d37b5985488
@@ -11,3 +11,10 @@
 25	778	8146949638949475	3dre/CMakeFiles/3dre.dir/math/matrix/matrix4x4.cpp.obj	3c79a62d9451e581
 35	128	8146939405843296	3dre/CMakeFiles/3dre.dir/math/vector/vector2.cpp.obj	13481ef285e86638
 43	130	8146939405904864	3dre/CMakeFiles/3dre.dir/math/vector/vector4.cpp.obj	41b833014bad3bdc
+60	1133	8147870692418465	3dre/CMakeFiles/3dre.dir/math/vector/vector3.cpp.obj	ff60a15ac4c41a0
+80	1136	8147870692564696	3dre/CMakeFiles/3dre.dir/math/vector/vector4.cpp.obj	41b833014bad3bdc
+93	1136	8147870692708789	3dre/CMakeFiles/3dre.dir/graphics/vertex.cpp.obj	736ebcda74f8562e
+75	1140	8147870692491487	3dre/CMakeFiles/3dre.dir/math/vector/vector2.cpp.obj	13481ef285e86638
+105	1165	8147870692820623	3dre/CMakeFiles/3dre.dir/graphics/triangle.cpp.obj	1f07a6cff3bc70e7
+86	1181	8147870692668631	3dre/CMakeFiles/3dre.dir/math/matrix/matrix4x4.cpp.obj	3c79a62d9451e581
+1181	1777	8147870703611942	3dre/3dre.exe	eb7cac860407e70e

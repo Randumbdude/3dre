@@ -1,4 +1,16 @@
 #include "vertex.h"
 
-vertex::vertex(float x, float y, float z, float nx = 0.0f, float ny = 1.0f, float nz = 0.0f, float u = 0.0f, float v = 0.0f)
-    : x(x), y(y), z(z), nx(nx), ny(ny), nz(nz), u(u), v(v) {}
+vertex::vertex()
+    : v(), nv(0.0f, 1.0f, 0.0f), uv()
+{
+}
+
+vertex::vertex(float x, float y, float z, float nx, float ny, float nz, float u, float v)
+    : v(x, y, z), nv(nx, ny, nz), uv(u, v)
+{
+}
+
+vertex::vertex(const vector3 &position, const vector3 &normal, const vector2 &texture_coordinates)
+    : v(position), nv(normal), uv(texture_coordinates)
+{
+}
