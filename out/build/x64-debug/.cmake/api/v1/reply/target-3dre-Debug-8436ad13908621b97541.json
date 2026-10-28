@@ -47,7 +47,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 45,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
@@ -127,6 +127,10 @@
 				{
 					"backtrace" : 3,
 					"path" : "C:/Users/myser/source/repos/3dre/3dre/math/matrix"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/myser/source/repos/3dre/3dre/graphics/types"
 				}
 			],
 			"language" : "CXX",
@@ -188,6 +192,11 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "d3dcompiler.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "user32.lib",
 				"role" : "libraries"
 			},
@@ -216,6 +225,10 @@
 		{
 			"backtrace" : 2,
 			"fragment" : "dxguid"
+		},
+		{
+			"backtrace" : 2,
+			"fragment" : "d3dcompiler"
 		},
 		{
 			"backtrace" : 2,
@@ -448,7 +461,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/graphics/vertex.cpp",
+			"path" : "3dre/graphics/types/vertex.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -457,7 +470,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/vertex.h",
+			"path" : "3dre/graphics/types/vertex.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -467,7 +480,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/graphics/triangle.cpp",
+			"path" : "3dre/graphics/types/triangle.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -476,7 +489,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/triangle.h",
+			"path" : "3dre/graphics/types/triangle.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -486,7 +499,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/graphics/mesh.cpp",
+			"path" : "3dre/graphics/types/mesh.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -495,7 +508,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/mesh.h",
+			"path" : "3dre/graphics/types/mesh.h",
 			"sourceGroupIndex" : 1
 		},
 		{

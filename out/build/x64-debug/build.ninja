@@ -81,7 +81,7 @@ build cmake_object_order_depends_target_3dre: phony || .
 build 3dre\CMakeFiles\3dre.dir\main.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\main.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -91,7 +91,7 @@ build 3dre\CMakeFiles\3dre.dir\main.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug 
 build 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\input\input.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\input
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -101,7 +101,7 @@ build 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj: CXX_COMPILER__3dre_unscanned
 build 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\processor\scheduler.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\processor
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -111,7 +111,7 @@ build 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj: CXX_COMPILER__3dre_u
 build 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\renderer.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -121,7 +121,7 @@ build 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj: CXX_COMPILER__3dre_uns
 build 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector3.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -131,7 +131,7 @@ build 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__3dre_u
 build 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector2.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -141,7 +141,7 @@ build 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__3dre_u
 build 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector4.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
@@ -151,39 +151,39 @@ build 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__3dre_u
 build 3dre\CMakeFiles\3dre.dir\math\matrix\matrix4x4.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\matrix\matrix4x4.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\matrix
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
   TARGET_PDB = 3dre\3dre.pdb
   TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
 
-build 3dre\CMakeFiles\3dre.dir\graphics\vertex.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\vertex.cpp || cmake_object_order_depends_target_3dre
+build 3dre\CMakeFiles\3dre.dir\graphics\types\vertex.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\types\vertex.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics
+  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics\types
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
   TARGET_PDB = 3dre\3dre.pdb
   TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
 
-build 3dre\CMakeFiles\3dre.dir\graphics\triangle.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\triangle.cpp || cmake_object_order_depends_target_3dre
+build 3dre\CMakeFiles\3dre.dir\graphics\types\triangle.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\types\triangle.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics
+  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics\types
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
   TARGET_PDB = 3dre\3dre.pdb
   TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
 
-build 3dre\CMakeFiles\3dre.dir\graphics\mesh.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\mesh.cpp || cmake_object_order_depends_target_3dre
+build 3dre\CMakeFiles\3dre.dir\graphics\types\mesh.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\types\mesh.cpp || cmake_object_order_depends_target_3dre
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics
+  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics\types
   TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
   TARGET_PDB = 3dre\3dre.pdb
   TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
@@ -196,11 +196,11 @@ build 3dre\CMakeFiles\3dre.dir\graphics\mesh.cpp.obj: CXX_COMPILER__3dre_unscann
 #############################################
 # Link the executable 3dre\3dre.exe
 
-build 3dre\3dre.exe: CXX_EXECUTABLE_LINKER__3dre_Debug 3dre\CMakeFiles\3dre.dir\main.cpp.obj 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj 3dre\CMakeFiles\3dre.dir\math\matrix\matrix4x4.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\vertex.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\triangle.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\mesh.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
+build 3dre\3dre.exe: CXX_EXECUTABLE_LINKER__3dre_Debug 3dre\CMakeFiles\3dre.dir\main.cpp.obj 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj 3dre\CMakeFiles\3dre.dir\math\matrix\matrix4x4.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\types\vertex.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\types\triangle.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\types\mesh.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows
-  LINK_LIBRARIES = d3d11.lib  dxgi.lib  dxguid.lib  user32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = d3d11.lib  dxgi.lib  dxguid.lib  d3dcompiler.lib  user32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   MANIFESTS = "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest"
   OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
   POST_BUILD = cd .
