@@ -1,5 +1,10 @@
 #pragma once
 #include "3dre.h"
+#include "shader.h"
+
+#include <array>
+#include <vector>
+#include <unordered_map>
 
 namespace renderer
 {
@@ -8,5 +13,12 @@ namespace renderer
     extern ComPtr<IDXGISwapChain> g_swap_chain;
     extern ComPtr<ID3D11RenderTargetView> g_render_target;
 
-    void render_main();
+    inline std::unordered_map<std::string, shader> shaders;
+
+    // add shader should only be called once per shader file. once loaded it doesnt need to be loaded again unless unloaded. (unloading hasnt been implemented...)
+    bool add_shader(const std::string &name, const wchar_t *vertex_file, const wchar_t *pixel_file);
+
+    bool add_triangle(const float p1[3], const float p2[3], const float p3[3], std::string &shader_name);
+
+    void render_main(void);
 };

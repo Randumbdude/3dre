@@ -26,6 +26,7 @@ add_executable (3dre WIN32 "main.cpp"
   graphics/types/triangle.h
   graphics/types/mesh.cpp
   graphics/types/mesh.h
+  graphics/types/shader.h
   )
 
 set_target_properties(3dre PROPERTIES
