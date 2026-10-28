@@ -10,7 +10,7 @@
             "args": [
             ],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${command:cmake.launchTargetDirectory}",
             "internalConsoleOptions": "openOnSessionStart",
         }
     ]

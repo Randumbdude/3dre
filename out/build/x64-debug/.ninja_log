@@ -49,3 +49,8 @@
 95	195	8149295170482209	demo/shaders/CMakeFiles/demo_shaders	aa05d9648de082e1
 95	195	8149295170482209	C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/CMakeFiles/demo_shaders	aa05d9648de082e1
 46	298	8149295169963672	engine/engine.exe	e9c3cf0598233f8e
+27	1944	8149297026963654	engine/CMakeFiles/engine.dir/__/demo/engine.cpp.obj	35f7968eebd97062
+19	3491	8149297026840800	engine/CMakeFiles/engine.dir/graphics/renderer.cpp.obj	5febace6bab10c8f
+3491	3941	8149297061606249	engine/engine.exe	e9c3cf0598233f8e
+13	100	8149299342783027	demo/shaders/CMakeFiles/demo_shaders	aa05d9648de082e1
+13	100	8149299342783027	C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/CMakeFiles/demo_shaders	aa05d9648de082e1

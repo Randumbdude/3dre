@@ -28,39 +28,72 @@ namespace renderer
         shader shader;
         ComPtr<ID3DBlob> vs_blob, ps_blob, errors;
 
-        // Compile vertex shader from file.
-        HRESULT hr = D3DCompileFromFile(
-            vertex_file, nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE,
-            "VSMain", "vs_4_0",
-            D3DCOMPILE_ENABLE_STRICTNESS, 0,
-            &vs_blob, &errors);
-
-        if (FAILED(hr))
+        // Load a precompiled .cso or compile a .hlsl file.
+        auto load_shader = [&](const wchar_t *file,
+                               const char *entry_point,
+                               const char *profile,
+                               ComPtr<ID3DBlob> &blob) -> bool
         {
-            log_errors(errors);
+            const std::filesystem::path path(file);
+            const std::wstring extension = path.extension().wstring();
+
+            HRESULT hr;
+
+            if (extension == L".cso")
+            {
+                // Load precompiled shader bytecode.
+                hr = D3DReadFileToBlob(file, &blob);
+
+                if (FAILED(hr))
+                {
+                    OutputDebugStringW(
+                        (L"Failed to load shader: " + path.wstring() + L"\n").c_str());
+                    return false;
+                }
+            }
+            else if (extension == L".hlsl")
+            {
+                // Compile HLSL source.
+                hr = D3DCompileFromFile(
+                    file,
+                    nullptr,
+                    D3D_COMPILE_STANDARD_FILE_INCLUDE,
+                    entry_point,
+                    profile,
+                    D3DCOMPILE_ENABLE_STRICTNESS,
+                    0,
+                    &blob,
+                    &errors);
+
+                if (FAILED(hr))
+                {
+                    log_errors(errors);
+                    return false;
+                }
+            }
+            else
+            {
+                OutputDebugStringW(
+                    (L"Unsupported shader extension: " + path.wstring() + L"\n").c_str());
+                return false;
+            }
+
+            return true;
+        };
+
+        // Load or compile both shaders.
+        if (!load_shader(vertex_file, "VSMain", "vs_4_0", vs_blob))
             return false;
-        }
 
-        // Compile pixel shader from file.
-        errors.Reset();
-
-        hr = D3DCompileFromFile(
-            pixel_file, nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE,
-            "PSMain", "ps_4_0",
-            D3DCOMPILE_ENABLE_STRICTNESS, 0,
-            &ps_blob, &errors);
-
-        if (FAILED(hr))
-        {
-            log_errors(errors);
+        if (!load_shader(pixel_file, "PSMain", "ps_4_0", ps_blob))
             return false;
-        }
 
         // Create GPU shader objects.
-        hr = g_device->CreateVertexShader(
+        HRESULT hr = g_device->CreateVertexShader(
             vs_blob->GetBufferPointer(),
             vs_blob->GetBufferSize(),
-            nullptr, &shader.vs);
+            nullptr,
+            &shader.vs);
 
         if (FAILED(hr))
             return false;
@@ -68,12 +101,13 @@ namespace renderer
         hr = g_device->CreatePixelShader(
             ps_blob->GetBufferPointer(),
             ps_blob->GetBufferSize(),
-            nullptr, &shader.ps);
+            nullptr,
+            &shader.ps);
 
         if (FAILED(hr))
             return false;
 
-        // Describe our Vertex structure to Direct3D.
+        // Describe the vertex position to Direct3D.
         const D3D11_INPUT_ELEMENT_DESC elements[] =
             {
                 {"POSITION", 0,
@@ -81,8 +115,10 @@ namespace renderer
                  0, 0,
                  D3D11_INPUT_PER_VERTEX_DATA, 0}};
 
+        // Use the vertex shader bytecode to create the input layout.
         hr = g_device->CreateInputLayout(
-            elements, 1,
+            elements,
+            1,
             vs_blob->GetBufferPointer(),
             vs_blob->GetBufferSize(),
             &shader.layout);
@@ -90,8 +126,9 @@ namespace renderer
         if (FAILED(hr))
             return false;
 
-        // Store it under its name, e.g. "basic".
+        // Store the shader under its name.
         shaders.insert_or_assign(name, std::move(shader));
+
         return true;
     }
 
