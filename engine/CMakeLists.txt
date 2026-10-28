@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (3dre WIN32 "main.cpp"
+add_executable (engine WIN32 "main.cpp"
   "3dre.h"
   input/input.cpp
   input/input.h
@@ -25,13 +25,13 @@ add_executable (3dre WIN32 "main.cpp"
   graphics/types/shader.h
   )
 
-set_target_properties(3dre PROPERTIES
+set_target_properties(engine PROPERTIES
   CXX_STANDARD 20
   CXX_STANDARD_REQUIRED ON
 )
 
 # Link the Windows Direct3D 11 and Win32 libraries.
-target_link_libraries(3dre PRIVATE
+target_link_libraries(engine PRIVATE
   d3d11
   dxgi
   dxguid
@@ -40,7 +40,7 @@ target_link_libraries(3dre PRIVATE
   gdi32
 )
 
-target_include_directories(3dre PRIVATE 
+target_include_directories(engine PRIVATE 
 ${CMAKE_CURRENT_SOURCE_DIR}
 ${CMAKE_CURRENT_SOURCE_DIR}/input
 ${CMAKE_CURRENT_SOURCE_DIR}/graphics

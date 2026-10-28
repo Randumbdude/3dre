@@ -28,7 +28,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for generating CXX dependencies.
 
-rule CXX_SCAN__3dre_Debug
+rule CXX_SCAN__engine_Debug
   deps = msvc
   command = "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe" $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
   description = Scanning $in for CXX dependencies
@@ -37,8 +37,8 @@ rule CXX_SCAN__3dre_Debug
 #############################################
 # Rule to generate ninja dyndep files for CXX.
 
-rule CXX_DYNDEP__3dre_Debug
-  command = "C:\Program Files\CMake\bin\cmake.exe" -E cmake_ninja_dyndep --tdi=3dre\CMakeFiles\3dre.dir\CXXDependInfo.json --lang=CXX --modmapfmt=msvc --dd=$out @$out.rsp
+rule CXX_DYNDEP__engine_Debug
+  command = "C:\Program Files\CMake\bin\cmake.exe" -E cmake_ninja_dyndep --tdi=engine\CMakeFiles\engine.dir\CXXDependInfo.json --lang=CXX --modmapfmt=msvc --dd=$out @$out.rsp
   description = Generating CXX dyndep file $out
   rspfile = $out.rsp
   rspfile_content = $in
@@ -48,7 +48,7 @@ rule CXX_DYNDEP__3dre_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__3dre_scanned_Debug
+rule CXX_COMPILER__engine_scanned_Debug
   deps = msvc
   command = ${LAUNCHER}${CODE_CHECK}"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe"  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
@@ -57,7 +57,7 @@ rule CXX_COMPILER__3dre_scanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__3dre_unscanned_Debug
+rule CXX_COMPILER__engine_unscanned_Debug
   deps = msvc
   command = ${LAUNCHER}${CODE_CHECK}"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe"  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
@@ -66,7 +66,7 @@ rule CXX_COMPILER__3dre_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__3dre_Debug
+rule CXX_EXECUTABLE_LINKER__engine_Debug
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --msvc-ver=1951 --intdir=$OBJECT_DIR --rc="C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\rc.exe" --mt="C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\mt.exe" --manifests $MANIFESTS -- "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\link.exe" /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT

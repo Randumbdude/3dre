@@ -13,7 +13,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "3dre",
-		"source" : "3dre"
+		"build" : "engine",
+		"source" : "engine"
 	}
 }

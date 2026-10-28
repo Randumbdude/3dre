@@ -12,4 +12,4 @@ endif()
 project ("3dre")
 
 # Include sub-projects.
-add_subdirectory ("3dre")
+add_subdirectory ("engine")

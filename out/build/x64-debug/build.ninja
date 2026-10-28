@@ -70,173 +70,173 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target 3dre
+# Object build statements for EXECUTABLE target engine
 
 
 #############################################
-# Order-only phony target for 3dre
+# Order-only phony target for engine
 
-build cmake_object_order_depends_target_3dre: phony || .
+build cmake_object_order_depends_target_engine: phony || .
 
-build 3dre\CMakeFiles\3dre.dir\main.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\main.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\main.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\main.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\input\input.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\input\input.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\input\input.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\input
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\input
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\processor\scheduler.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\processor\scheduler.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\processor
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\processor
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\renderer.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\graphics\renderer.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\graphics
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector3.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector3.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector2.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector2.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\vector\vector4.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector4.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\vector
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\math\matrix\matrix4x4.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\math\matrix\matrix4x4.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\matrix\matrix4x4.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\math\matrix
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\matrix
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
-build 3dre\CMakeFiles\3dre.dir\graphics\types\vertex.cpp.obj: CXX_COMPILER__3dre_unscanned_Debug C$:\Users\myser\source\repos\3dre\3dre\graphics\types\vertex.cpp || cmake_object_order_depends_target_3dre
+build engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\graphics\types\vertex.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\3dre -IC:\Users\myser\source\repos\3dre\3dre\input -IC:\Users\myser\source\repos\3dre\3dre\graphics -IC:\Users\myser\source\repos\3dre\3dre\processor -IC:\Users\myser\source\repos\3dre\3dre\math -IC:\Users\myser\source\repos\3dre\3dre\math\vector -IC:\Users\myser\source\repos\3dre\3dre\math\matrix -IC:\Users\myser\source\repos\3dre\3dre\graphics\types
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
-  OBJECT_FILE_DIR = 3dre\CMakeFiles\3dre.dir\graphics\types
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\graphics\types
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target 3dre
+# Link build statements for EXECUTABLE target engine
 
 
 #############################################
-# Link the executable 3dre\3dre.exe
+# Link the executable engine\engine.exe
 
-build 3dre\3dre.exe: CXX_EXECUTABLE_LINKER__3dre_Debug 3dre\CMakeFiles\3dre.dir\main.cpp.obj 3dre\CMakeFiles\3dre.dir\input\input.cpp.obj 3dre\CMakeFiles\3dre.dir\processor\scheduler.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\renderer.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector3.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector2.cpp.obj 3dre\CMakeFiles\3dre.dir\math\vector\vector4.cpp.obj 3dre\CMakeFiles\3dre.dir\math\matrix\matrix4x4.cpp.obj 3dre\CMakeFiles\3dre.dir\graphics\types\vertex.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
+build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\engine.dir\main.cpp.obj engine\CMakeFiles\engine.dir\input\input.cpp.obj engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows
   LINK_LIBRARIES = d3d11.lib  dxgi.lib  dxguid.lib  d3dcompiler.lib  user32.lib  gdi32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   MANIFESTS = "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest"
-  OBJECT_DIR = 3dre\CMakeFiles\3dre.dir
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = 3dre\CMakeFiles\3dre.dir\
-  TARGET_FILE = 3dre\3dre.exe
-  TARGET_IMPLIB = 3dre\3dre.lib
-  TARGET_PDB = 3dre\3dre.pdb
-  TARGET_SUPPORT_DIR = 3dre\CMakeFiles\3dre.dir
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_FILE = engine\engine.exe
+  TARGET_IMPLIB = engine\engine.lib
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
 
 #############################################
 # Utility command for copy_shaders
 
-build 3dre\copy_shaders: phony 3dre\CMakeFiles\copy_shaders
+build engine\copy_shaders: phony engine\CMakeFiles\copy_shaders
 
 
 #############################################
 # Utility command for edit_cache
 
-build 3dre\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\3dre && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
+build engine\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build 3dre\edit_cache: phony 3dre\CMakeFiles\edit_cache.util
+build engine\edit_cache: phony engine\CMakeFiles\edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build 3dre\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\3dre && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
+build engine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build 3dre\rebuild_cache: phony 3dre\CMakeFiles\rebuild_cache.util
+build engine\rebuild_cache: phony engine\CMakeFiles\rebuild_cache.util
 
 
 #############################################
-# Custom command for 3dre\CMakeFiles\copy_shaders
+# Custom command for engine\CMakeFiles\copy_shaders
 
-build 3dre\CMakeFiles\copy_shaders | ${cmake_ninja_workdir}3dre\CMakeFiles\copy_shaders: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\3dre && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/myser/source/repos/3dre/shaders C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/shaders"
+build engine\CMakeFiles\copy_shaders | ${cmake_ninja_workdir}engine\CMakeFiles\copy_shaders: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/myser/source/repos/3dre/shaders C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/shaders"
   DESC = Copying shaders
 
 # =============================================================================
 # Target aliases.
 
-build 3dre: phony 3dre\3dre.exe
+build copy_shaders: phony engine\copy_shaders
 
-build 3dre.exe: phony 3dre\3dre.exe
+build engine: phony engine\engine.exe
 
-build copy_shaders: phony 3dre\copy_shaders
+build engine.exe: phony engine\engine.exe
 
 # =============================================================================
 # Folder targets.
@@ -246,14 +246,14 @@ build copy_shaders: phony 3dre\copy_shaders
 #############################################
 # Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug
 
-build all: phony 3dre\all
+build all: phony engine\all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre
+# Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine
 
-build 3dre\all: phony 3dre\3dre.exe 3dre\copy_shaders
+build engine\all: phony engine\engine.exe engine\copy_shaders
 
 # =============================================================================
 # Built-in targets
@@ -262,14 +262,14 @@ build 3dre\all: phony 3dre\3dre.exe 3dre\copy_shaders
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:\Users\myser\source\repos\3dre\out\build\x64-debug\cmake_install.cmake C$:\Users\myser\source\repos\3dre\out\build\x64-debug\3dre\cmake_install.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake
+build build.ninja C$:\Users\myser\source\repos\3dre\out\build\x64-debug\cmake_install.cmake C$:\Users\myser\source\repos\3dre\out\build\x64-debug\engine\cmake_install.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake: phony
+build C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake: phony
 
 
 #############################################

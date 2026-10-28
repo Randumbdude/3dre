@@ -20,15 +20,15 @@
 					"source" : "."
 				},
 				{
-					"build" : "3dre",
-					"jsonFile" : "directory-3dre-Debug-2015074109a77f7607be.json",
+					"build" : "engine",
+					"jsonFile" : "directory-engine-Debug-4b53840d35697ea38700.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
-					"source" : "3dre",
+					"source" : "engine",
 					"targetIndexes" : 
 					[
 						0,
@@ -57,16 +57,16 @@
 			[
 				{
 					"directoryIndex" : 1,
-					"id" : "3dre::@2a7991cdcb64f18c5bc1",
-					"jsonFile" : "target-3dre-Debug-b46426f352e96f0e6c1a.json",
-					"name" : "3dre",
+					"id" : "copy_shaders::@4088515cb4035b412499",
+					"jsonFile" : "target-copy_shaders-Debug-17bbb5c078c2f9e0f2d8.json",
+					"name" : "copy_shaders",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "copy_shaders::@2a7991cdcb64f18c5bc1",
-					"jsonFile" : "target-copy_shaders-Debug-b8ae82ee655b822e35ec.json",
-					"name" : "copy_shaders",
+					"id" : "engine::@4088515cb4035b412499",
+					"jsonFile" : "target-engine-Debug-b78498cb118d045d28b3.json",
+					"name" : "engine",
 					"projectIndex" : 0
 				}
 			]

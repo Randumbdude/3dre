@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "3dre/3dre.exe"
+			"path" : "engine/engine.exe"
 		},
 		{
-			"path" : "3dre/3dre.pdb"
+			"path" : "engine/engine.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -23,7 +23,7 @@
 		],
 		"files" : 
 		[
-			"3dre/CMakeLists.txt",
+			"engine/CMakeLists.txt",
 			"C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/cmake/Microsoft/SegmentHeap.cmake",
 			"CMakeLists.txt"
 		],
@@ -102,35 +102,35 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre"
+					"path" : "C:/Users/myser/source/repos/3dre/engine"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/input"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/input"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/graphics"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/graphics"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/processor"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/processor"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/math"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/math"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/math/vector"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/math/vector"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/math/matrix"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/math/matrix"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "C:/Users/myser/source/repos/3dre/3dre/graphics/types"
+					"path" : "C:/Users/myser/source/repos/3dre/engine/graphics/types"
 				}
 			],
 			"language" : "CXX",
@@ -156,7 +156,7 @@
 			]
 		}
 	],
-	"id" : "3dre::@2a7991cdcb64f18c5bc1",
+	"id" : "engine::@4088515cb4035b412499",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -237,12 +237,12 @@
 			"fragment" : "gdi32"
 		}
 	],
-	"name" : "3dre",
-	"nameOnDisk" : "3dre.exe",
+	"name" : "engine",
+	"nameOnDisk" : "engine.exe",
 	"paths" : 
 	{
-		"build" : "3dre",
-		"source" : "3dre"
+		"build" : "engine",
+		"source" : "engine"
 	},
 	"sourceGroups" : 
 	[
@@ -295,7 +295,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/main.cpp",
+			"path" : "engine/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -304,7 +304,7 @@
 			[
 				1
 			],
-			"path" : "3dre/3dre.h",
+			"path" : "engine/3dre.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -314,7 +314,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/input/input.cpp",
+			"path" : "engine/input/input.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -323,7 +323,7 @@
 			[
 				1
 			],
-			"path" : "3dre/input/input.h",
+			"path" : "engine/input/input.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -332,7 +332,7 @@
 			[
 				1
 			],
-			"path" : "3dre/input/keys.h",
+			"path" : "engine/input/keys.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -341,7 +341,7 @@
 			[
 				1
 			],
-			"path" : "3dre/processor/scheduler.h",
+			"path" : "engine/processor/scheduler.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -351,7 +351,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/processor/scheduler.cpp",
+			"path" : "engine/processor/scheduler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -361,7 +361,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/graphics/renderer.cpp",
+			"path" : "engine/graphics/renderer.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -370,7 +370,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/renderer.h",
+			"path" : "engine/graphics/renderer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -380,7 +380,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/math/vector/vector3.cpp",
+			"path" : "engine/math/vector/vector3.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -389,7 +389,7 @@
 			[
 				1
 			],
-			"path" : "3dre/math/vector/vector3.h",
+			"path" : "engine/math/vector/vector3.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -399,7 +399,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/math/vector/vector2.cpp",
+			"path" : "engine/math/vector/vector2.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -408,7 +408,7 @@
 			[
 				1
 			],
-			"path" : "3dre/math/vector/vector2.h",
+			"path" : "engine/math/vector/vector2.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -418,7 +418,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/math/vector/vector4.cpp",
+			"path" : "engine/math/vector/vector4.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -427,7 +427,7 @@
 			[
 				1
 			],
-			"path" : "3dre/math/vector/vector4.h",
+			"path" : "engine/math/vector/vector4.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -437,7 +437,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/math/matrix/matrix4x4.cpp",
+			"path" : "engine/math/matrix/matrix4x4.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -446,7 +446,7 @@
 			[
 				1
 			],
-			"path" : "3dre/math/matrix/matrix4x4.h",
+			"path" : "engine/math/matrix/matrix4x4.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -456,7 +456,7 @@
 				1
 			],
 			"compileGroupIndex" : 0,
-			"path" : "3dre/graphics/types/vertex.cpp",
+			"path" : "engine/graphics/types/vertex.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -465,7 +465,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/types/vertex.h",
+			"path" : "engine/graphics/types/vertex.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -474,7 +474,7 @@
 			[
 				1
 			],
-			"path" : "3dre/graphics/types/shader.h",
+			"path" : "engine/graphics/types/shader.h",
 			"sourceGroupIndex" : 1
 		},
 		{

@@ -205,7 +205,7 @@
 			"path" : "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Linker/Windows-MSVC.cmake"
 		},
 		{
-			"path" : "3dre/CMakeLists.txt"
+			"path" : "engine/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

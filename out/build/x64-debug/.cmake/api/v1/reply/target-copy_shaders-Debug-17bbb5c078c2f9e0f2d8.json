@@ -8,7 +8,7 @@
 		],
 		"files" : 
 		[
-			"3dre/CMakeLists.txt"
+			"engine/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -28,12 +28,12 @@
 		"major" : 2,
 		"minor" : 11
 	},
-	"id" : "copy_shaders::@2a7991cdcb64f18c5bc1",
+	"id" : "copy_shaders::@4088515cb4035b412499",
 	"name" : "copy_shaders",
 	"paths" : 
 	{
-		"build" : "3dre",
-		"source" : "3dre"
+		"build" : "engine",
+		"source" : "engine"
 	},
 	"sourceGroups" : 
 	[
@@ -61,7 +61,7 @@
 				1
 			],
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/3dre/CMakeFiles/copy_shaders",
+			"path" : "out/build/x64-debug/engine/CMakeFiles/copy_shaders",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -71,7 +71,7 @@
 				0
 			],
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/3dre/CMakeFiles/copy_shaders.rule",
+			"path" : "out/build/x64-debug/engine/CMakeFiles/copy_shaders.rule",
 			"sourceGroupIndex" : 1
 		}
 	],
