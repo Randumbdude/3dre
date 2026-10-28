@@ -9,7 +9,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
 					"minimumCMakeVersion" : 
@@ -31,8 +32,22 @@
 					"source" : "engine",
 					"targetIndexes" : 
 					[
-						0,
 						1
+					]
+				},
+				{
+					"build" : "demo/shaders",
+					"jsonFile" : "directory-demo.shaders-Debug-d810517d9aa99a1f8566.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "demo/shaders",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -43,7 +58,8 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "3dre",
 					"targetIndexes" : 
@@ -56,10 +72,10 @@
 			"targets" : 
 			[
 				{
-					"directoryIndex" : 1,
-					"id" : "copy_shaders::@4088515cb4035b412499",
-					"jsonFile" : "target-copy_shaders-Debug-1c4856c9b580e8cc068e.json",
-					"name" : "copy_shaders",
+					"directoryIndex" : 2,
+					"id" : "demo_shaders::@bd908115d8fd7f9b95db",
+					"jsonFile" : "target-demo_shaders-Debug-de175daefcede8cd4729.json",
+					"name" : "demo_shaders",
 					"projectIndex" : 0
 				},
 				{

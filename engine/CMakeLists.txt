@@ -55,11 +55,11 @@ ${CMAKE_SOURCE_DIR}/demo/
 )
 
 # Copy shader assets on every build.
-add_custom_target(copy_shaders ALL
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${CMAKE_SOURCE_DIR}/shaders"
-        "${CMAKE_BINARY_DIR}/engine/shaders"
-    COMMENT "Copying shaders"
-)
+#add_custom_target(copy_shaders ALL
+#    COMMAND ${CMAKE_COMMAND} -E copy_directory
+#        "${CMAKE_SOURCE_DIR}/shaders"
+#        "${CMAKE_BINARY_DIR}/engine/shaders"
+#    COMMENT "Copying shaders"
+#)
 
 # TODO: Add tests and install targets if needed.

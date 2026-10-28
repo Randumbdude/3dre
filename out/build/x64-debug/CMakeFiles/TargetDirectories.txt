@@ -1,6 +1,8 @@
 C:/Users/myser/source/repos/3dre/out/build/x64-debug/CMakeFiles/edit_cache.dir
 C:/Users/myser/source/repos/3dre/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
 C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/engine.dir
-C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/copy_shaders.dir
 C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/edit_cache.dir
 C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/rebuild_cache.dir
+C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/CMakeFiles/demo_shaders.dir
+C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/CMakeFiles/edit_cache.dir
+C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/CMakeFiles/rebuild_cache.dir

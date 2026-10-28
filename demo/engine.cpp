@@ -7,7 +7,7 @@ namespace engine
     void render_init(void)
     {
         // add the default shaders
-        renderer::add_shader("basic", L"shaders/basic_vs.hlsl", L"shaders/basic_ps.hlsl");
+        renderer::add_shader("basic", L"shaders/basic_vs.cso", L"shaders/basic_ps.cso");
     }
 
     void render_frame(void)

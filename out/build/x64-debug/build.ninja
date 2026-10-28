@@ -203,12 +203,6 @@ build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\e
 
 
 #############################################
-# Utility command for copy_shaders
-
-build engine\copy_shaders: phony engine\CMakeFiles\copy_shaders
-
-
-#############################################
 # Utility command for edit_cache
 
 build engine\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
@@ -231,18 +225,71 @@ build engine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build engine\rebuild_cache: phony engine\CMakeFiles\rebuild_cache.util
 
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/myser/source/repos/3dre/CMakeLists.txt
+# =============================================================================
+
 
 #############################################
-# Custom command for engine\CMakeFiles\copy_shaders
+# Utility command for demo_shaders
 
-build engine\CMakeFiles\copy_shaders | ${cmake_ninja_workdir}engine\CMakeFiles\copy_shaders: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/myser/source/repos/3dre/shaders C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders"
-  DESC = Copying shaders
+build demo\shaders\demo_shaders: phony demo\shaders\CMakeFiles\demo_shaders demo\shaders\basic_ps.cso demo\shaders\basic_vs.cso
+
+
+#############################################
+# Utility command for edit_cache
+
+build demo\shaders\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build demo\shaders\edit_cache: phony demo\shaders\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build demo\shaders\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\myser\source\repos\3dre -BC:\Users\myser\source\repos\3dre\out\build\x64-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build demo\shaders\rebuild_cache: phony demo\shaders\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Custom command for demo\shaders\CMakeFiles\demo_shaders
+
+build demo\shaders\CMakeFiles\demo_shaders | ${cmake_ninja_workdir}demo\shaders\CMakeFiles\demo_shaders: CUSTOM_COMMAND demo\shaders\basic_vs.cso demo\shaders\basic_ps.cso
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders && "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_vs.cso C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_ps.cso C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders"
+  DESC = Copying demo shaders beside engine
+
+
+#############################################
+# Custom command for demo\shaders\basic_ps.cso
+
+build demo\shaders\basic_ps.cso | ${cmake_ninja_workdir}demo\shaders\basic_ps.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_ps.hlsl
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E PSMain /T ps_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_ps.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_ps.hlsl"
+  DESC = Compiling shader basic_ps.hlsl
+  restat = 1
+
+
+#############################################
+# Custom command for demo\shaders\basic_vs.cso
+
+build demo\shaders\basic_vs.cso | ${cmake_ninja_workdir}demo\shaders\basic_vs.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_vs.hlsl
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E VSMain /T vs_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_vs.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_vs.hlsl"
+  DESC = Compiling shader basic_vs.hlsl
+  restat = 1
 
 # =============================================================================
 # Target aliases.
 
-build copy_shaders: phony engine\copy_shaders
+build demo_shaders: phony demo\shaders\demo_shaders
 
 build engine: phony engine\engine.exe
 
@@ -256,14 +303,21 @@ build engine.exe: phony engine\engine.exe
 #############################################
 # Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug
 
-build all: phony engine\all
+build all: phony engine\all demo\shaders\all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders
+
+build demo\shaders\all: phony demo\shaders\demo_shaders
 
 # =============================================================================
 
 #############################################
 # Folder: C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine
 
-build engine\all: phony engine\engine.exe engine\copy_shaders
+build engine\all: phony engine\engine.exe
 
 # =============================================================================
 # Built-in targets
@@ -272,14 +326,14 @@ build engine\all: phony engine\engine.exe engine\copy_shaders
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:\Users\myser\source\repos\3dre\out\build\x64-debug\cmake_install.cmake C$:\Users\myser\source\repos\3dre\out\build\x64-debug\engine\cmake_install.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake
+build build.ninja C$:\Users\myser\source\repos\3dre\out\build\x64-debug\cmake_install.cmake C$:\Users\myser\source\repos\3dre\out\build\x64-debug\engine\cmake_install.cmake C$:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders\cmake_install.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\demo\shaders\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake: phony
+build C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\cmake\Microsoft\SegmentHeap.cmake C$:\Users\myser\source\repos\3dre\CMakeLists.txt C$:\Users\myser\source\repos\3dre\demo\shaders\CMakeLists.txt C$:\Users\myser\source\repos\3dre\engine\CMakeLists.txt CMakeCache.txt CMakeFiles\4.4.3\CMakeCCompiler.cmake CMakeFiles\4.4.3\CMakeCXXCompiler.cmake CMakeFiles\4.4.3\CMakeRCCompiler.cmake CMakeFiles\4.4.3\CMakeSystem.cmake: phony
 
 
 #############################################

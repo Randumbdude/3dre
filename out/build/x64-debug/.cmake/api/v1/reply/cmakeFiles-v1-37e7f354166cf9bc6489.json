@@ -206,6 +206,9 @@
 		},
 		{
 			"path" : "engine/CMakeLists.txt"
+		},
+		{
+			"path" : "demo/shaders/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

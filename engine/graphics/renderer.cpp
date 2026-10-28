@@ -4,6 +4,7 @@
 
 #include <d3dcompiler.h>
 #include <wrl/client.h>
+#include <filesystem>
 
 namespace renderer
 {

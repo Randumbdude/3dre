@@ -13,3 +13,4 @@ project ("3dre")
 
 # Include sub-projects.
 add_subdirectory ("engine")
+add_subdirectory ("demo/shaders")
