@@ -1,6 +1,7 @@
 ﻿#include "3dre.h"
 #include "input.h"
 #include "renderer.h"
+#include "engine.h"
 
 #include <chrono>
 
@@ -130,8 +131,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 	int fps_frames = 0;
 	int fps = 0;
 
-	// add basic shaders
-	renderer::add_shader("basic", L"shaders/basic_vs.hlsl", L"shaders/basic_ps.hlsl");
+	// initialize once for our engine render initializer.
+	engine::render_init();
 
 	// ---- Main loop ----
 	MSG msg = {};
@@ -162,10 +163,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		g_context->OMSetRenderTargets(1, g_render_target.GetAddressOf(), nullptr);
 		g_context->ClearRenderTargetView(g_render_target.Get(), black);
 
-		renderer::add_triangle(
-			vertex(-0.65f, -0.55f, 0.0f),
-			vertex(0.00f, 0.65f, 0.0f),
-			vertex(0.65f, -0.55f, 0.0f));
+		engine::render_frame();
 
 		render_main(); // call render main
 

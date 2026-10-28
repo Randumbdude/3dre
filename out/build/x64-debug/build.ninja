@@ -81,7 +81,7 @@ build cmake_object_order_depends_target_engine: phony || .
 build engine\CMakeFiles\engine.dir\main.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\main.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -91,7 +91,7 @@ build engine\CMakeFiles\engine.dir\main.cpp.obj: CXX_COMPILER__engine_unscanned_
 build engine\CMakeFiles\engine.dir\input\input.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\input\input.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\input
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -101,7 +101,7 @@ build engine\CMakeFiles\engine.dir\input\input.cpp.obj: CXX_COMPILER__engine_uns
 build engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\processor\scheduler.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\processor
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -111,7 +111,7 @@ build engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj: CXX_COMPILER__en
 build engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\graphics\renderer.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\graphics
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -121,7 +121,7 @@ build engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj: CXX_COMPILER__engi
 build engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector3.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -131,7 +131,7 @@ build engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj: CXX_COMPILER__en
 build engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector2.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -141,7 +141,7 @@ build engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj: CXX_COMPILER__en
 build engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\vector\vector4.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\vector
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -151,7 +151,7 @@ build engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj: CXX_COMPILER__en
 build engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\math\matrix\matrix4x4.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\math\matrix
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
@@ -161,9 +161,19 @@ build engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj: CXX_COMPILER__
 build engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\graphics\types\vertex.cpp || cmake_object_order_depends_target_engine
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
-  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
   OBJECT_DIR = engine\CMakeFiles\engine.dir
   OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\graphics\types
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
+
+build engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\demo\engine.cpp || cmake_object_order_depends_target_engine
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\__\demo
   TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
   TARGET_PDB = engine\engine.pdb
   TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
@@ -176,7 +186,7 @@ build engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable engine\engine.exe
 
-build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\engine.dir\main.cpp.obj engine\CMakeFiles\engine.dir\input\input.cpp.obj engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
+build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\engine.dir\main.cpp.obj engine\CMakeFiles\engine.dir\input\input.cpp.obj engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows

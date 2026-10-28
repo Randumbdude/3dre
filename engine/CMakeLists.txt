@@ -23,6 +23,8 @@ add_executable (engine WIN32 "main.cpp"
   graphics/types/vertex.cpp
   graphics/types/vertex.h
   graphics/types/shader.h
+  "${CMAKE_SOURCE_DIR}/demo/engine.cpp"
+  "${CMAKE_SOURCE_DIR}/demo/engine.h"
   )
 
 set_target_properties(engine PROPERTIES
@@ -49,6 +51,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/math
 ${CMAKE_CURRENT_SOURCE_DIR}/math/vector
 ${CMAKE_CURRENT_SOURCE_DIR}/math/matrix
 ${CMAKE_CURRENT_SOURCE_DIR}/graphics/types
+${CMAKE_SOURCE_DIR}/demo/
 )
 
 # Copy shader assets on every build.

@@ -1,6 +1,6 @@
 # ninja log v7
-8	242	8149253623443105	build.ninja	9e191b4cc38c3688
-8	242	8149253623171115	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
+8	242	8149270327160936	build.ninja	9e191b4cc38c3688
+8	242	8149270327001653	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
 8	242	8149221705821717	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
 27	3142	8149221737074159	3dre/CMakeFiles/3dre.dir/main.cpp.obj	7d24be091238a5f
 3143	3490	8149221768246115	3dre/3dre.exe	6f76422b3f04af56
@@ -28,3 +28,23 @@
 28	4262	8149253749377602	engine/CMakeFiles/engine.dir/main.cpp.obj	d7448469efd2cd97
 49	4338	8149253749553105	engine/CMakeFiles/engine.dir/processor/scheduler.cpp.obj	eda057b004706c0d
 4339	4709	8149253792473532	engine/engine.exe	3aff35ca0bfef33a
+17	258	8149270327160936	build.ninja	9e191b4cc38c3688
+17	258	8149270327160936	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
+17	258	8149270327160936	C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/cmake_install.cmake	9e191b4cc38c3688
+86	1086	8149270329083116	engine/CMakeFiles/engine.dir/math/matrix/matrix4x4.cpp.obj	2e82f9f8be6bdba4
+96	1116	8149270329167999	engine/CMakeFiles/engine.dir/graphics/types/vertex.cpp.obj	99312633aa846caa
+78	1118	8149270329022852	engine/CMakeFiles/engine.dir/math/vector/vector4.cpp.obj	22e3bc764a0f61d3
+56	1121	8149270328812812	engine/CMakeFiles/engine.dir/math/vector/vector3.cpp.obj	ac3c93a26527ed0b
+68	1124	8149270328937428	engine/CMakeFiles/engine.dir/math/vector/vector2.cpp.obj	a3ac7ebb29d8b4fb
+1103	1258	8149270339277371	engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+1103	1258	8149270339277371	C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+34	3145	8149270328540624	engine/CMakeFiles/engine.dir/input/input.cpp.obj	3440a1709846db71
+103	3369	8149270329282152	engine/CMakeFiles/engine.dir/__/demo/engine.cpp.obj	35f7968eebd97062
+47	3484	8149270328688968	engine/CMakeFiles/engine.dir/graphics/renderer.cpp.obj	5febace6bab10c8f
+41	4537	8149270328637671	engine/CMakeFiles/engine.dir/processor/scheduler.cpp.obj	17579cdc171629ba
+35	107	8149271601039304	engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+35	107	8149271601039304	C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+29	100	8149271793857220	engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+29	100	8149271793857220	C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/copy_shaders	4e5ced744c6e9da3
+22	2788	8149271793707631	engine/CMakeFiles/engine.dir/main.cpp.obj	39ddb943643d6e52
+2789	3082	8149271821461616	engine/engine.exe	e9c3cf0598233f8e
