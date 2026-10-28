@@ -236,7 +236,7 @@ build engine\rebuild_cache: phony engine\CMakeFiles\rebuild_cache.util
 # Custom command for engine\CMakeFiles\copy_shaders
 
 build engine\CMakeFiles\copy_shaders | ${cmake_ninja_workdir}engine\CMakeFiles\copy_shaders: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/myser/source/repos/3dre/shaders C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/shaders"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\engine && "C:\Program Files\CMake\bin\cmake.exe" -E copy_directory C:/Users/myser/source/repos/3dre/shaders C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders"
   DESC = Copying shaders
 
 # =============================================================================

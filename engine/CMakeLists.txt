@@ -58,7 +58,7 @@ ${CMAKE_SOURCE_DIR}/demo/
 add_custom_target(copy_shaders ALL
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_SOURCE_DIR}/shaders"
-        "${CMAKE_BINARY_DIR}/3dre/shaders"
+        "${CMAKE_BINARY_DIR}/engine/shaders"
     COMMENT "Copying shaders"
 )
 
