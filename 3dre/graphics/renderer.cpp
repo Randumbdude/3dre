@@ -94,25 +94,70 @@ namespace renderer
         return true;
     }
 
-    bool add_triangle(const float p1[3], const float p2[3], const float p3[3], std::string &shader_name)
+    void add_triangle(const vertex &a, const vertex &b, const vertex &c, const std::string &shader_name)
     {
         auto it = shaders.find(shader_name);
 
         if (it == shaders.end())
-            return false;
+            return;
 
         auto &vertices = it->second.vertices;
 
-        vertices.push_back({p1[0], p1[1], p1[2]});
-        vertices.push_back({p2[0], p2[1], p2[2]});
-        vertices.push_back({p3[0], p3[1], p3[2]});
-
-        return true;
+        vertices.push_back(a);
+        vertices.push_back(b);
+        vertices.push_back(c);
     }
 
     void render_main(void)
     {
         if (!g_context || !g_device)
             return;
+
+        for (auto &[name, shader] : shaders)
+        {
+            if (shader.vertices.empty())
+                continue;
+
+            // Upload all triangles using this shader in one buffer.
+            D3D11_BUFFER_DESC desc{};
+            desc.ByteWidth = static_cast<UINT>(
+                shader.vertices.size() * sizeof(vertex));
+            desc.Usage = D3D11_USAGE_DEFAULT;
+            desc.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+
+            D3D11_SUBRESOURCE_DATA data{};
+            data.pSysMem = shader.vertices.data();
+
+            ComPtr<ID3D11Buffer> buffer;
+
+            HRESULT hr = g_device->CreateBuffer(
+                &desc, &data, &buffer);
+
+            if (FAILED(hr))
+            {
+                shader.vertices.clear();
+                continue;
+            }
+
+            constexpr UINT stride = sizeof(vertex);
+            constexpr UINT offset = 0;
+
+            ID3D11Buffer *raw_buffer = buffer.Get();
+
+            g_context->IASetInputLayout(shader.layout.Get());
+            g_context->IASetVertexBuffers(
+                0, 1, &raw_buffer, &stride, &offset);
+            g_context->IASetPrimitiveTopology(
+                D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+
+            g_context->VSSetShader(shader.vs.Get(), nullptr, 0);
+            g_context->PSSetShader(shader.ps.Get(), nullptr, 0);
+
+            g_context->Draw(
+                static_cast<UINT>(shader.vertices.size()), 0);
+
+            // Empty the draw list for the next frame.
+            shader.vertices.clear();
+        }
     }
 }

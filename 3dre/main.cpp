@@ -130,6 +130,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 	int fps_frames = 0;
 	int fps = 0;
 
+	// add basic shaders
+	renderer::add_shader("basic", L"shaders/basic_vs.hlsl", L"shaders/basic_ps.hlsl");
+
 	// ---- Main loop ----
 	MSG msg = {};
 	while (flags::g_running)
@@ -158,6 +161,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		const float black[4] = {0, 0, 0, 1}; // black
 		g_context->OMSetRenderTargets(1, g_render_target.GetAddressOf(), nullptr);
 		g_context->ClearRenderTargetView(g_render_target.Get(), black);
+
+		renderer::add_triangle(
+			vertex(-0.65f, -0.55f, 0.0f),
+			vertex(0.00f, 0.65f, 0.0f),
+			vertex(0.65f, -0.55f, 0.0f));
 
 		render_main(); // call render main
 

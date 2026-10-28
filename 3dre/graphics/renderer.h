@@ -18,7 +18,7 @@ namespace renderer
     // add shader should only be called once per shader file. once loaded it doesnt need to be loaded again unless unloaded. (unloading hasnt been implemented...)
     bool add_shader(const std::string &name, const wchar_t *vertex_file, const wchar_t *pixel_file);
 
-    bool add_triangle(const float p1[3], const float p2[3], const float p3[3], std::string &shader_name);
+    void add_triangle(const vertex &a, const vertex &b, const vertex &c, const std::string &shader = "basic");
 
     void render_main(void);
 };

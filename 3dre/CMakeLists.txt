@@ -22,10 +22,6 @@ add_executable (3dre WIN32 "main.cpp"
   math/matrix/matrix4x4.h
   graphics/types/vertex.cpp
   graphics/types/vertex.h
-  graphics/types/triangle.cpp
-  graphics/types/triangle.h
-  graphics/types/mesh.cpp
-  graphics/types/mesh.h
   graphics/types/shader.h
   )
 
@@ -55,5 +51,12 @@ ${CMAKE_CURRENT_SOURCE_DIR}/math/matrix
 ${CMAKE_CURRENT_SOURCE_DIR}/graphics/types
 )
 
+# Copy shader assets on every build.
+add_custom_target(copy_shaders ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/shaders"
+        "${CMAKE_BINARY_DIR}/3dre/shaders"
+    COMMENT "Copying shaders"
+)
 
 # TODO: Add tests and install targets if needed.

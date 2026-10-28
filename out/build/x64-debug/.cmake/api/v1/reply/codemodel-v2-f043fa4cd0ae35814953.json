@@ -31,7 +31,8 @@
 					"source" : "3dre",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -47,7 +48,8 @@
 					"name" : "3dre",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -56,8 +58,15 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "3dre::@2a7991cdcb64f18c5bc1",
-					"jsonFile" : "target-3dre-Debug-599a8926e65b0aae8943.json",
+					"jsonFile" : "target-3dre-Debug-b46426f352e96f0e6c1a.json",
 					"name" : "3dre",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "copy_shaders::@2a7991cdcb64f18c5bc1",
+					"jsonFile" : "target-copy_shaders-Debug-b8ae82ee655b822e35ec.json",
+					"name" : "copy_shaders",
 					"projectIndex" : 0
 				}
 			]

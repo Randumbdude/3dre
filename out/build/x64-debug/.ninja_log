@@ -1,12 +1,12 @@
 # ninja log v7
-22	268	8149181807259183	build.ninja	9e191b4cc38c3688
-22	268	8149181807086688	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
-22	268	8149181807188295	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
-28	4009	8148436846201192	3dre/CMakeFiles/3dre.dir/main.cpp.obj	7d24be091238a5f
-2424	2755	8148565921575694	3dre/3dre.exe	4f6a36ab23e5c309
+8	242	8149221705948759	build.ninja	9e191b4cc38c3688
+8	242	8149221705630901	C:/Users/myser/source/repos/3dre/out/build/x64-debug/cmake_install.cmake	9e191b4cc38c3688
+8	242	8149221705821717	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/cmake_install.cmake	9e191b4cc38c3688
+26	2819	8149218274171081	3dre/CMakeFiles/3dre.dir/main.cpp.obj	7d24be091238a5f
+2820	3031	8149218302072474	3dre/3dre.exe	4f6a36ab23e5c309
 35	2974	8148436846201192	3dre/CMakeFiles/3dre.dir/input/input.cpp.obj	59146b2ad8dc8bef
 42	4300	8148436846376527	3dre/CMakeFiles/3dre.dir/processor/scheduler.cpp.obj	8cf82d0faf0af82f
-37	2423	8148565897711162	3dre/CMakeFiles/3dre.dir/graphics/renderer.cpp.obj	7d8383b4a1c6a68a
+27	1955	8149207990492428	3dre/CMakeFiles/3dre.dir/graphics/renderer.cpp.obj	7d8383b4a1c6a68a
 59	1058	8148436846560607	3dre/CMakeFiles/3dre.dir/math/vector/vector3.cpp.obj	b72efde16627a3d
 84	1089	8148436846803227	3dre/CMakeFiles/3dre.dir/math/matrix/matrix4x4.cpp.obj	f7b3744056317b6e
 67	1048	8148436846650633	3dre/CMakeFiles/3dre.dir/math/vector/vector2.cpp.obj	641caf171b39a988
@@ -16,6 +16,9 @@
 99	1032	8148436846969103	3dre/CMakeFiles/3dre.dir/graphics/types/triangle.cpp.obj	e74f8b038c339831
 91	1048	8148436846889087	3dre/CMakeFiles/3dre.dir/graphics/types/vertex.cpp.obj	da759e38219ac53e
 1034	2063	8148436856319544	3dre/CMakeFiles/3dre.dir/graphics/types/mesh.cpp.obj	fbc0c907f78af898
-30	2675	8149193636744695	3dre/CMakeFiles/3dre.dir/graphics/renderer.cpp.obj	7d8383b4a1c6a68a
-21	3312	8149193636639122	3dre/CMakeFiles/3dre.dir/main.cpp.obj	7d24be091238a5f
-3313	3661	8149193669593552	3dre/3dre.exe	4f6a36ab23e5c309
+30	91	8149215132636253	3dre/CMakeFiles/copy_shaders	aa0d01ebcd2955eb
+30	91	8149215132636253	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/CMakeFiles/copy_shaders	aa0d01ebcd2955eb
+34	130	8149221737074159	3dre/CMakeFiles/copy_shaders	aa0d01ebcd2955eb
+34	130	8149221737074159	C:/Users/myser/source/repos/3dre/out/build/x64-debug/3dre/CMakeFiles/copy_shaders	aa0d01ebcd2955eb
+27	3142	8149221737074159	3dre/CMakeFiles/3dre.dir/main.cpp.obj	7d24be091238a5f
+3143	3490	8149221768246115	3dre/3dre.exe	6f76422b3f04af56
