@@ -7,11 +7,45 @@
 
 using namespace renderer;
 
+// Keep the rendered scene at the same aspect ratio as the initial 1280x720 view.
+static constexpr float RENDER_ASPECT_RATIO = 16.0f / 9.0f;
+
 static void CreateRenderTarget()
 {
 	ComPtr<ID3D11Texture2D> backBuffer;
 	g_swap_chain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
 	g_device->CreateRenderTargetView(backBuffer.Get(), nullptr, &g_render_target);
+}
+
+static void SetLetterboxedViewport(UINT width, UINT height)
+{
+	if (width == 0 || height == 0)
+		return;
+
+	const float client_width = static_cast<float>(width);
+	const float client_height = static_cast<float>(height);
+	const float client_aspect_ratio = client_width / client_height;
+
+	D3D11_VIEWPORT viewport = {};
+	viewport.MinDepth = 0.0f;
+	viewport.MaxDepth = 1.0f;
+
+	if (client_aspect_ratio > RENDER_ASPECT_RATIO)
+	{
+		// The window is too wide: fit the view vertically and add side bars.
+		viewport.Height = client_height;
+		viewport.Width = client_height * RENDER_ASPECT_RATIO;
+		viewport.TopLeftX = (client_width - viewport.Width) * 0.5f;
+	}
+	else
+	{
+		// The window is too tall or narrower: fit the view horizontally and add top/bottom bars.
+		viewport.Width = client_width;
+		viewport.Height = client_width / RENDER_ASPECT_RATIO;
+		viewport.TopLeftY = (client_height - viewport.Height) * 0.5f;
+	}
+
+	g_context->RSSetViewports(1, &viewport);
 }
 
 static void OnResize(UINT width, UINT height)
@@ -23,12 +57,7 @@ static void OnResize(UINT width, UINT height)
 	g_render_target.Reset(); // must release before resizing
 	g_swap_chain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
 	CreateRenderTarget();
-
-	D3D11_VIEWPORT vp = {};
-	vp.Width = static_cast<float>(width);
-	vp.Height = static_cast<float>(height);
-	vp.MaxDepth = 1.0f;
-	g_context->RSSetViewports(1, &vp);
+	SetLetterboxedViewport(width, height);
 }
 
 static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
