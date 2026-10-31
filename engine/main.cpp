@@ -225,7 +225,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 			g_context->ClearRenderTargetView(g_render_target.Get(), flags::default_bg_color);
 
 			// Render the scene.
-			engine::render_frame();
+			engine::render_frame(); // move this to renderer.cpp
 			render_main(main_camera);
 
 			// Display the completed frame.
