@@ -1,9 +1,8 @@
 #pragma once
 #include "3dre.h"
 #include "shader.h"
+#include "camera.h"
 
-#include <array>
-#include <vector>
 #include <unordered_map>
 
 namespace renderer
@@ -13,6 +12,8 @@ namespace renderer
     extern ComPtr<IDXGISwapChain> g_swap_chain;
     extern ComPtr<ID3D11RenderTargetView> g_render_target;
 
+    inline camera main_camera;
+
     inline std::unordered_map<std::string, shader> shaders;
 
     // add shader should only be called once per shader file. once loaded it doesnt need to be loaded again unless unloaded. (unloading hasnt been implemented...)
@@ -20,5 +21,5 @@ namespace renderer
 
     void add_triangle(const vertex &a, const vertex &b, const vertex &c, const std::string &shader = "basic");
 
-    void render_main(void);
+    void render_main(const camera &active_camera);
 };

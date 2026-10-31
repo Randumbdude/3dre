@@ -10,36 +10,39 @@ if(NOT FXC_EXECUTABLE)
     message(FATAL_ERROR "fxc.exe not found. Install the Windows SDK.")
 endif()
 
+# Output directly into the engine's runtime shader directory.
 set(SHADER_OUTPUT_DIR "${CMAKE_BINARY_DIR}/engine/shaders")
-set(SHADER_FILES
-    basic_vs.hlsl
-    basic_ps.hlsl
+
+set(SHADERS
+    "basic_vs.hlsl|VSMain|vs_5_0"
+    "basic_ps.hlsl|PSMain|ps_5_0"
 )
 
 set(COMPILED_SHADERS)
 
-foreach(SHADER IN LISTS SHADER_FILES)
-    if(SHADER STREQUAL "basic_vs.hlsl")
-        set(ENTRY_POINT VSMain)
-        set(PROFILE vs_5_0)
-    elseif(SHADER STREQUAL "basic_ps.hlsl")
-        set(ENTRY_POINT PSMain)
-        set(PROFILE ps_5_0)
-    endif()
+foreach(SHADER IN LISTS SHADERS)
+    string(REPLACE "|" ";" PARTS "${SHADER}")
+    list(GET PARTS 0 SOURCE_NAME)
+    list(GET PARTS 1 ENTRY_POINT)
+    list(GET PARTS 2 PROFILE)
 
-    string(REPLACE ".hlsl" ".cso" OUTPUT_NAME "${SHADER}")
-    set(OUTPUT_FILE "${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_NAME}")
+    string(REPLACE ".hlsl" ".cso" OUTPUT_NAME "${SOURCE_NAME}")
+
+    set(SOURCE_FILE "${CMAKE_CURRENT_SOURCE_DIR}/${SOURCE_NAME}")
+    set(OUTPUT_FILE "${SHADER_OUTPUT_DIR}/${OUTPUT_NAME}")
 
     add_custom_command(
         OUTPUT "${OUTPUT_FILE}"
+        COMMAND "${CMAKE_COMMAND}" -E make_directory
+            "${SHADER_OUTPUT_DIR}"
         COMMAND "${FXC_EXECUTABLE}"
             /nologo
             /E "${ENTRY_POINT}"
             /T "${PROFILE}"
             /Fo "${OUTPUT_FILE}"
-            "${CMAKE_CURRENT_SOURCE_DIR}/${SHADER}"
-        DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${SHADER}"
-        COMMENT "Compiling shader ${SHADER}"
+            "${SOURCE_FILE}"
+        DEPENDS "${SOURCE_FILE}"
+        COMMENT "Compiling ${SOURCE_NAME}"
         VERBATIM
     )
 
@@ -48,12 +51,9 @@ endforeach()
 
 add_custom_target(demo_shaders ALL
     DEPENDS ${COMPILED_SHADERS}
-    COMMAND "${CMAKE_COMMAND}" -E make_directory
-        "${SHADER_OUTPUT_DIR}"
-    COMMAND "${CMAKE_COMMAND}" -E copy_if_different
-        ${COMPILED_SHADERS}
-        "${SHADER_OUTPUT_DIR}"
-    COMMAND_EXPAND_LISTS
-    COMMENT "Copying demo shaders beside engine"
-    VERBATIM
 )
+
+# Make sure the executable's build depends on the shader outputs.
+if(TARGET 3dre)
+    add_dependencies(3dre demo_shaders)
+endif()

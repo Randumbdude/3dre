@@ -178,6 +178,16 @@ build engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj: CXX_COMPILER__engine_
   TARGET_PDB = engine\engine.pdb
   TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
 
+build engine\CMakeFiles\engine.dir\graphics\camera.cpp.obj: CXX_COMPILER__engine_unscanned_Debug C$:\Users\myser\source\repos\3dre\engine\graphics\camera.cpp || cmake_object_order_depends_target_engine
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI
+  INCLUDES = -IC:\Users\myser\source\repos\3dre\engine -IC:\Users\myser\source\repos\3dre\engine\input -IC:\Users\myser\source\repos\3dre\engine\graphics -IC:\Users\myser\source\repos\3dre\engine\processor -IC:\Users\myser\source\repos\3dre\engine\math -IC:\Users\myser\source\repos\3dre\engine\math\vector -IC:\Users\myser\source\repos\3dre\engine\math\matrix -IC:\Users\myser\source\repos\3dre\engine\graphics\types -IC:\Users\myser\source\repos\3dre\demo
+  OBJECT_DIR = engine\CMakeFiles\engine.dir
+  OBJECT_FILE_DIR = engine\CMakeFiles\engine.dir\graphics
+  TARGET_COMPILE_PDB = engine\CMakeFiles\engine.dir\
+  TARGET_PDB = engine\engine.pdb
+  TARGET_SUPPORT_DIR = engine\CMakeFiles\engine.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target engine
@@ -186,7 +196,7 @@ build engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj: CXX_COMPILER__engine_
 #############################################
 # Link the executable engine\engine.exe
 
-build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\engine.dir\main.cpp.obj engine\CMakeFiles\engine.dir\input\input.cpp.obj engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
+build engine\engine.exe: CXX_EXECUTABLE_LINKER__engine_Debug engine\CMakeFiles\engine.dir\main.cpp.obj engine\CMakeFiles\engine.dir\input\input.cpp.obj engine\CMakeFiles\engine.dir\processor\scheduler.cpp.obj engine\CMakeFiles\engine.dir\graphics\renderer.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector3.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector2.cpp.obj engine\CMakeFiles\engine.dir\math\vector\vector4.cpp.obj engine\CMakeFiles\engine.dir\math\matrix\matrix4x4.cpp.obj engine\CMakeFiles\engine.dir\graphics\types\vertex.cpp.obj engine\CMakeFiles\engine.dir\__\demo\engine.cpp.obj engine\CMakeFiles\engine.dir\graphics\camera.cpp.obj | C$:\Program$ Files\Microsoft$ Visual$ Studio\18\Community\VC\Tools\MSVC\14.52.36725\include\manifest\segmentheap.manifest
   CONFIG = Debug
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -ZI
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows
@@ -234,7 +244,7 @@ build engine\rebuild_cache: phony engine\CMakeFiles\rebuild_cache.util
 #############################################
 # Utility command for demo_shaders
 
-build demo\shaders\demo_shaders: phony demo\shaders\CMakeFiles\demo_shaders demo\shaders\basic_ps.cso demo\shaders\basic_vs.cso
+build demo\shaders\demo_shaders: phony demo\shaders\CMakeFiles\demo_shaders engine\shaders\basic_ps.cso engine\shaders\basic_vs.cso
 
 
 #############################################
@@ -262,28 +272,26 @@ build demo\shaders\rebuild_cache: phony demo\shaders\CMakeFiles\rebuild_cache.ut
 
 
 #############################################
-# Custom command for demo\shaders\CMakeFiles\demo_shaders
+# Phony custom command for demo\shaders\CMakeFiles\demo_shaders
 
-build demo\shaders\CMakeFiles\demo_shaders | ${cmake_ninja_workdir}demo\shaders\CMakeFiles\demo_shaders: CUSTOM_COMMAND demo\shaders\basic_vs.cso demo\shaders\basic_ps.cso
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders && "C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_vs.cso C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_ps.cso C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders"
-  DESC = Copying demo shaders beside engine
+build demo\shaders\CMakeFiles\demo_shaders | ${cmake_ninja_workdir}demo\shaders\CMakeFiles\demo_shaders: phony engine\shaders\basic_vs.cso engine\shaders\basic_ps.cso
 
 
 #############################################
-# Custom command for demo\shaders\basic_ps.cso
+# Custom command for engine\shaders\basic_ps.cso
 
-build demo\shaders\basic_ps.cso | ${cmake_ninja_workdir}demo\shaders\basic_ps.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_ps.hlsl
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E PSMain /T ps_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_ps.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_ps.hlsl"
-  DESC = Compiling shader basic_ps.hlsl
+build engine\shaders\basic_ps.cso | ${cmake_ninja_workdir}engine\shaders\basic_ps.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_ps.hlsl
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E PSMain /T ps_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders/basic_ps.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_ps.hlsl"
+  DESC = Compiling basic_ps.hlsl
   restat = 1
 
 
 #############################################
-# Custom command for demo\shaders\basic_vs.cso
+# Custom command for engine\shaders\basic_vs.cso
 
-build demo\shaders\basic_vs.cso | ${cmake_ninja_workdir}demo\shaders\basic_vs.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_vs.hlsl
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E VSMain /T vs_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/demo/shaders/basic_vs.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_vs.hlsl"
-  DESC = Compiling shader basic_vs.hlsl
+build engine\shaders\basic_vs.cso | ${cmake_ninja_workdir}engine\shaders\basic_vs.cso: CUSTOM_COMMAND C$:\Users\myser\source\repos\3dre\demo\shaders\basic_vs.hlsl
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\myser\source\repos\3dre\out\build\x64-debug\demo\shaders && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders && "C:\Program Files (x86)\Windows Kits\10\bin\10.0.28000.0\x64\fxc.exe" /nologo /E VSMain /T vs_5_0 /Fo C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/shaders/basic_vs.cso C:/Users/myser/source/repos/3dre/demo/shaders/basic_vs.hlsl"
+  DESC = Compiling basic_vs.hlsl
   restat = 1
 
 # =============================================================================

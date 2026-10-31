@@ -41,19 +41,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 36,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 45,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 30,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
@@ -157,7 +157,8 @@
 				13,
 				15,
 				17,
-				20
+				20,
+				22
 			]
 		}
 	],
@@ -264,7 +265,8 @@
 				13,
 				15,
 				17,
-				20
+				20,
+				22
 			]
 		},
 		{
@@ -282,14 +284,15 @@
 				16,
 				18,
 				19,
-				21
+				21,
+				23
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				22
+				24
 			]
 		}
 	],
@@ -501,6 +504,25 @@
 				1
 			],
 			"path" : "demo/engine.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"compileGroupIndex" : 0,
+			"path" : "engine/graphics/camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"backtraces" : 
+			[
+				1
+			],
+			"path" : "engine/graphics/camera.h",
 			"sourceGroupIndex" : 1
 		},
 		{

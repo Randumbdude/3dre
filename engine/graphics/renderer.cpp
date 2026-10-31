@@ -5,6 +5,7 @@
 #include <d3dcompiler.h>
 #include <wrl/client.h>
 #include <filesystem>
+#include <vector>
 
 namespace renderer
 {
@@ -12,6 +13,14 @@ namespace renderer
     ComPtr<ID3D11DeviceContext> g_context;
     ComPtr<IDXGISwapChain> g_swap_chain;
     ComPtr<ID3D11RenderTargetView> g_render_target;
+
+    ComPtr<ID3D11Buffer> g_camera_buffer;
+
+    struct camera_constants
+    {
+        matrix4x4 view;
+        matrix4x4 projection;
+    };
 
     void log_errors(ComPtr<ID3DBlob> &errors)
     {
@@ -146,11 +155,46 @@ namespace renderer
         vertices.push_back(c);
     }
 
-    void render_main(void)
+    void render_main(const camera &active_camera)
     {
         if (!g_context || !g_device)
             return;
 
+        // Create the constant buffer once.
+        if (!g_camera_buffer)
+        {
+            D3D11_BUFFER_DESC desc{};
+            desc.ByteWidth = sizeof(camera_constants);
+            desc.Usage = D3D11_USAGE_DEFAULT;
+            desc.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
+
+            HRESULT hr = g_device->CreateBuffer(
+                &desc, nullptr, &g_camera_buffer);
+
+            if (FAILED(hr))
+                return;
+        }
+
+        // Get the latest camera matrices.
+        camera_constants constants{};
+        constants.view = active_camera.get_view_matrix();
+        constants.projection = active_camera.get_projection_matrix();
+
+        // Upload matrices to the GPU.
+        g_context->UpdateSubresource(
+            g_camera_buffer.Get(),
+            0,
+            nullptr,
+            &constants,
+            0,
+            0);
+
+        // Bind the camera buffer to vertex shader slot b0.
+        ID3D11Buffer *raw_camera_buffer = g_camera_buffer.Get();
+        g_context->VSSetConstantBuffers(
+            0, 1, &raw_camera_buffer);
+
+        // add all shaders and draw thingies
         for (auto &[name, shader] : shaders)
         {
             if (shader.vertices.empty())

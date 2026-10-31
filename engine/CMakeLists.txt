@@ -25,6 +25,8 @@ add_executable (engine WIN32 "main.cpp"
   graphics/types/shader.h
   "${CMAKE_SOURCE_DIR}/demo/engine.cpp"
   "${CMAKE_SOURCE_DIR}/demo/engine.h"
+  graphics/camera.cpp
+  graphics/camera.h
   )
 
 set_target_properties(engine PROPERTIES

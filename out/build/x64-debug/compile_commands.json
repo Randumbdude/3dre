@@ -58,5 +58,11 @@
   "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -IC:\\Users\\myser\\source\\repos\\3dre\\engine -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\input -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\graphics -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\processor -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math\\vector -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math\\matrix -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\graphics\\types -IC:\\Users\\myser\\source\\repos\\3dre\\demo /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI /Foengine\\CMakeFiles\\engine.dir\\__\\demo\\engine.cpp.obj /Fdengine\\CMakeFiles\\engine.dir\\ /FS -c C:\\Users\\myser\\source\\repos\\3dre\\demo\\engine.cpp",
   "file": "C:/Users/myser/source/repos/3dre/demo/engine.cpp",
   "output": "C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/engine.dir/__/demo/engine.cpp.obj"
+},
+{
+  "directory": "C:/Users/myser/source/repos/3dre/out/build/x64-debug",
+  "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -IC:\\Users\\myser\\source\\repos\\3dre\\engine -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\input -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\graphics -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\processor -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math\\vector -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\math\\matrix -IC:\\Users\\myser\\source\\repos\\3dre\\engine\\graphics\\types -IC:\\Users\\myser\\source\\repos\\3dre\\demo /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI /Foengine\\CMakeFiles\\engine.dir\\graphics\\camera.cpp.obj /Fdengine\\CMakeFiles\\engine.dir\\ /FS -c C:\\Users\\myser\\source\\repos\\3dre\\engine\\graphics\\camera.cpp",
+  "file": "C:/Users/myser/source/repos/3dre/engine/graphics/camera.cpp",
+  "output": "C:/Users/myser/source/repos/3dre/out/build/x64-debug/engine/CMakeFiles/engine.dir/graphics/camera.cpp.obj"
 }
 ]

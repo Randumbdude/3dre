@@ -45,6 +45,13 @@ public:
     /// Creates a Z-axis rotation. The angle is in radians.
     static matrix4x4 rotation_z(float radians);
 
+    /// Creates a left-handed view matrix; degenerate camera axes return identity.
+    static matrix4x4 look_at_lh(const vector3 &eye, const vector3 &target, const vector3 &up);
+
+    /// Creates a left-handed perspective projection. fov_y is in radians and
+    /// must be between 0 and pi; invalid parameters return a zero matrix.
+    static matrix4x4 perspective_fov_lh(float fov_y, float aspect_ratio, float near_plane, float far_plane);
+
     /// Returns the transpose, swapping rows and columns.
     matrix4x4 transposed() const;
 

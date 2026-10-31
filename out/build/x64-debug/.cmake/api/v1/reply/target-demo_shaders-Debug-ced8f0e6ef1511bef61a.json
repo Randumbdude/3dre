@@ -18,7 +18,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 49,
+				"line" : 52,
 				"parent" : 0
 			}
 		]
@@ -83,7 +83,7 @@
 				0
 			],
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/demo/shaders/basic_ps.cso.rule",
+			"path" : "out/build/x64-debug/engine/shaders/basic_ps.cso.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -93,7 +93,7 @@
 				0
 			],
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/demo/shaders/basic_vs.cso.rule",
+			"path" : "out/build/x64-debug/engine/shaders/basic_vs.cso.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

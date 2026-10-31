@@ -93,6 +93,44 @@ matrix4x4 matrix4x4::rotation_z(float radians)
         0.0f, 0.0f, 0.0f, 1.0f);
 }
 
+matrix4x4 matrix4x4::look_at_lh(const vector3 &eye, const vector3 &target, const vector3 &up)
+{
+    const vector3 forward = (target - eye).normalized();
+    const vector3 right = up.cross(forward).normalized();
+    const vector3 corrected_up = forward.cross(right).normalized();
+
+    // A zero forward or right axis means the camera basis cannot be formed.
+    if (forward.length_squared() == 0.0f || right.length_squared() == 0.0f)
+        return identity();
+
+    return matrix4x4(
+        right.x, corrected_up.x, forward.x, 0.0f,
+        right.y, corrected_up.y, forward.y, 0.0f,
+        right.z, corrected_up.z, forward.z, 0.0f,
+        -right.dot(eye), -corrected_up.dot(eye), -forward.dot(eye), 1.0f);
+}
+
+matrix4x4 matrix4x4::perspective_fov_lh(
+    float fov_y, float aspect_ratio, float near_plane, float far_plane)
+{
+    constexpr float pi = 3.14159265358979323846f;
+    if (fov_y <= 0.0f || fov_y >= pi || aspect_ratio <= 0.0f ||
+        near_plane <= 0.0f || far_plane <= near_plane)
+    {
+        return zero();
+    }
+
+    const float y_scale = 1.0f / std::tan(fov_y * 0.5f);
+    const float x_scale = y_scale / aspect_ratio;
+    const float depth_range = far_plane - near_plane;
+
+    return matrix4x4(
+        x_scale, 0.0f, 0.0f, 0.0f,
+        0.0f, y_scale, 0.0f, 0.0f,
+        0.0f, 0.0f, far_plane / depth_range, 1.0f,
+        0.0f, 0.0f, -(near_plane * far_plane) / depth_range, 0.0f);
+}
+
 matrix4x4 matrix4x4::transposed() const
 {
     matrix4x4 result = zero();

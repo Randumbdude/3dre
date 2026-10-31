@@ -58,6 +58,9 @@ static void OnResize(UINT width, UINT height)
 	g_swap_chain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
 	CreateRenderTarget();
 	SetLetterboxedViewport(width, height);
+
+	// Currently bugged. TODO FIX aspect ratio
+	// main_camera.set_aspect_ratio(static_cast<float>(width), static_cast<float>(height));
 }
 
 static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -194,7 +197,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 
 		engine::render_frame();
 
-		render_main(); // call render main
+		render_main(main_camera); // call render main
 
 		g_swap_chain->Present(1, flags::VSYNC); // 1 = vsync
 	}
