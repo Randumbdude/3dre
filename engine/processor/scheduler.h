@@ -1,8 +1,6 @@
 #pragma once
 
 #include <any>
-#include <cstdint>
-#include <exception>
 #include <functional>
 #include <future>
 #include <memory>

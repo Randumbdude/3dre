@@ -9,25 +9,20 @@
 
 namespace renderer
 {
-    ComPtr<ID3D11Device> g_device;
-    ComPtr<ID3D11DeviceContext> g_context;
-    ComPtr<IDXGISwapChain> g_swap_chain;
-    ComPtr<ID3D11RenderTargetView> g_render_target;
+    // these 4 variables are the core foundation of rendering with directx.
+    // together they handle: hardware management, command execution, screen buffers, and drawing targets.
+    ComPtr<ID3D11Device> g_device;                  // is the art supply store where you buy your canvas and paint brushes
+    ComPtr<ID3D11DeviceContext> g_context;          // is the artist holding the brushes and doing the actual painting.
+    ComPtr<IDXGISwapChain> g_swap_chain;            // is the gallery assistant who flips the easel around to show the audience the finished painting while handing the artist a fresh canvas.
+    ComPtr<ID3D11RenderTargetView> g_render_target; // is the canvas currently sitting on the easel being painted.
 
+    // camera buffer
     ComPtr<ID3D11Buffer> g_camera_buffer;
-
     struct camera_constants
     {
         matrix4x4 view;
         matrix4x4 projection;
     };
-
-    void log_errors(ComPtr<ID3DBlob> &errors)
-    {
-        if (errors)
-            OutputDebugStringA(
-                static_cast<const char *>(errors->GetBufferPointer()));
-    }
 
     bool add_shader(const std::string &name, const wchar_t *vertex_file, const wchar_t *pixel_file)
     {

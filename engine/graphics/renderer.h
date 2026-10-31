@@ -7,10 +7,12 @@
 
 namespace renderer
 {
-    extern ComPtr<ID3D11Device> g_device;
-    extern ComPtr<ID3D11DeviceContext> g_context;
-    extern ComPtr<IDXGISwapChain> g_swap_chain;
-    extern ComPtr<ID3D11RenderTargetView> g_render_target;
+    // these 4 variables are the core foundation of rendering with directx.
+    // together they handle: hardware management, command execution, screen buffers, and drawing targets.
+    extern ComPtr<ID3D11Device> g_device;                  // is the art supply store where you buy your canvas and paint brushes
+    extern ComPtr<ID3D11DeviceContext> g_context;          // is the artist holding the brushes and doing the actual painting.
+    extern ComPtr<IDXGISwapChain> g_swap_chain;            // is the gallery assistant who flips the easel around to show the audience the finished painting while handing the artist a fresh canvas.
+    extern ComPtr<ID3D11RenderTargetView> g_render_target; // is the canvas currently sitting on the easel being painted.
 
     inline camera main_camera;
 

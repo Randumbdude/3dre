@@ -7,43 +7,40 @@
 
 using namespace renderer;
 
-// Keep the rendered scene at the same aspect ratio as the initial 1280x720 view.
-static constexpr float RENDER_ASPECT_RATIO = 16.0f / 9.0f;
-
-static void CreateRenderTarget()
+static bool CreateRenderTarget()
 {
-	ComPtr<ID3D11Texture2D> backBuffer;
-	g_swap_chain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
-	g_device->CreateRenderTargetView(backBuffer.Get(), nullptr, &g_render_target);
+	ComPtr<ID3D11Texture2D> back_buffer;
+
+	HRESULT hr = g_swap_chain->GetBuffer(
+		0, IID_PPV_ARGS(&back_buffer));
+
+	if (FAILED(hr))
+		return false;
+
+	hr = g_device->CreateRenderTargetView(
+		back_buffer.Get(),
+		nullptr,
+		&g_render_target);
+
+	if (FAILED(hr))
+		return false;
+
+	return true;
 }
 
-static void SetLetterboxedViewport(UINT width, UINT height)
+static void SetViewport(UINT width, UINT height)
 {
 	if (width == 0 || height == 0)
 		return;
 
-	const float client_width = static_cast<float>(width);
-	const float client_height = static_cast<float>(height);
-	const float client_aspect_ratio = client_width / client_height;
+	D3D11_VIEWPORT viewport{};
 
-	D3D11_VIEWPORT viewport = {};
+	viewport.TopLeftX = 0.0f;
+	viewport.TopLeftY = 0.0f;
+	viewport.Width = static_cast<float>(width);
+	viewport.Height = static_cast<float>(height);
 	viewport.MinDepth = 0.0f;
 	viewport.MaxDepth = 1.0f;
-
-	if (client_aspect_ratio > RENDER_ASPECT_RATIO)
-	{
-		// The window is too wide: fit the view vertically and add side bars.
-		viewport.Height = client_height;
-		viewport.Width = client_height * RENDER_ASPECT_RATIO;
-		viewport.TopLeftX = (client_width - viewport.Width) * 0.5f;
-	}
-	else
-	{
-		// The window is too tall or narrower: fit the view horizontally and add top/bottom bars.
-		viewport.Width = client_width;
-		viewport.Height = client_width / RENDER_ASPECT_RATIO;
-		viewport.TopLeftY = (client_height - viewport.Height) * 0.5f;
-	}
 
 	g_context->RSSetViewports(1, &viewport);
 }
@@ -53,14 +50,34 @@ static void OnResize(UINT width, UINT height)
 	if (!g_swap_chain || width == 0 || height == 0)
 		return;
 
+	// Release references to the old back buffer.
 	g_context->OMSetRenderTargets(0, nullptr, nullptr);
-	g_render_target.Reset(); // must release before resizing
-	g_swap_chain->ResizeBuffers(0, width, height, DXGI_FORMAT_UNKNOWN, 0);
-	CreateRenderTarget();
-	SetLetterboxedViewport(width, height);
+	g_render_target.Reset();
 
-	// Currently bugged. TODO FIX aspect ratio
-	// main_camera.set_aspect_ratio(static_cast<float>(width), static_cast<float>(height));
+	HRESULT hr = g_swap_chain->ResizeBuffers(
+		0,
+		width,
+		height,
+		DXGI_FORMAT_UNKNOWN,
+		0);
+
+	if (FAILED(hr))
+	{
+		OutputDebugStringA("Failed to resize swap chain.\n");
+		return;
+	}
+
+	if (!CreateRenderTarget())
+	{
+		OutputDebugStringA("Failed to recreate render target.\n");
+		return;
+	}
+
+	SetViewport(width, height);
+
+	main_camera.set_aspect_ratio(
+		static_cast<float>(width),
+		static_cast<float>(height));
 }
 
 static LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -104,10 +121,11 @@ static bool InitD3D(HWND hwnd, UINT width, UINT height)
 
 	UINT flags = 0;
 #ifdef _DEBUG
-	flags |= D3D11_CREATE_DEVICE_DEBUG; // needs the Graphics Tools optional Windows feature
+	flags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
 
 	D3D_FEATURE_LEVEL requested = D3D_FEATURE_LEVEL_11_0;
+
 	HRESULT hr = D3D11CreateDeviceAndSwapChain(
 		nullptr, D3D_DRIVER_TYPE_HARDWARE, nullptr, flags,
 		&requested, 1, D3D11_SDK_VERSION,
@@ -116,8 +134,15 @@ static bool InitD3D(HWND hwnd, UINT width, UINT height)
 	if (FAILED(hr))
 		return false;
 
-	CreateRenderTarget();
-	OnResize(width, height); // sets the initial viewport
+	if (!CreateRenderTarget())
+		return false;
+
+	SetViewport(width, height);
+
+	main_camera.set_aspect_ratio(
+		static_cast<float>(width),
+		static_cast<float>(height));
+
 	return true;
 }
 
@@ -135,11 +160,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 	RegisterClassExA(&wc);
 
 	// Ask for a 1280x720 *client* area, then let Windows compute the outer size
-	RECT rect = {0, 0, 1280, 720};
+	RECT rect = {0, 0, flags::window_starting_width, flags::window_starting_height};
 	AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
 
 	HWND hwnd = CreateWindowExA(
-		0, className, _3dre::window_title.c_str(), WS_OVERLAPPEDWINDOW,
+		0, className, flags::window_title.c_str(), WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		rect.right - rect.left, rect.bottom - rect.top,
 		nullptr, nullptr, hInstance, nullptr);
@@ -147,7 +172,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 	if (!hwnd)
 		return 1;
 
-	if (!InitD3D(hwnd, 1280, 720))
+	if (!InitD3D(hwnd, flags::window_starting_width, flags::window_starting_height))
 	{
 		MessageBoxA(hwnd, "Failed to initialise Direct3D 11", "Error", MB_OK | MB_ICONERROR);
 		return 1;
@@ -191,16 +216,21 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 		}
 
 		// ---- Render ----
-		const float black[4] = {0, 0, 0, 1}; // black
-		g_context->OMSetRenderTargets(1, g_render_target.GetAddressOf(), nullptr);
-		g_context->ClearRenderTargetView(g_render_target.Get(), black);
+		if (g_render_target)
+		{
+			// Bind the back buffer for this frame.
+			g_context->OMSetRenderTargets(1, g_render_target.GetAddressOf(), nullptr);
 
-		engine::render_frame();
+			// Clear the previous frame.
+			g_context->ClearRenderTargetView(g_render_target.Get(), flags::default_bg_color);
 
-		render_main(main_camera); // call render main
+			// Render the scene.
+			engine::render_frame();
+			render_main(main_camera);
 
-		g_swap_chain->Present(1, flags::VSYNC); // 1 = vsync
+			// Display the completed frame.
+			g_swap_chain->Present(1, flags::VSYNC);
+		}
 	}
-
 	return 0;
 }
